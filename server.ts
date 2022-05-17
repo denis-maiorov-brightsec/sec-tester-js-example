@@ -1,14 +1,11 @@
-const { format } = require("date-fns");
-
-const jsonServer = require("json-server");
-const { isAuthenticated } = require("./jwt-authenticate");
-const {
+import jsonServer from 'json-server';
+import { isAuthenticated } from './jwt-authenticate';
+import {
   loginHandler,
   uploadFileHandler,
   uploadFilesHandler,
-  uploadImageHandler,
   registerHandler,
-} = require("./additional_routes");
+} from './additional_routes';
 const { defaultPort, databaseFile, jwtSecret } = require("./config.json");
 
 const low = require("lowdb");
@@ -68,7 +65,7 @@ server.use((req, res, next) => {
   const resource = req.path.slice(1).split("/")[0];
   const protectedResource =
     protectedResources[resource] &&
-    protectedResources[resource].map((item) => item.toUpperCase());
+    protectedResources[resource].map((item: any) => item.toUpperCase());
   const reqMethod = req.method.toUpperCase();
 
   if (protectedResource && protectedResource.includes(reqMethod)) {

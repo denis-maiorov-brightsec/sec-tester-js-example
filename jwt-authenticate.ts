@@ -1,13 +1,13 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 const {jwtSecret, jwtTokenexpiresInMinutes} = require('./config.json');
 
-function generateJwtToken(userId) {
+export function generateJwtToken(userId: string) {
   return jwt.sign({sub: userId}, jwtSecret, {
     expiresIn: jwtTokenexpiresInMinutes + 'm',
   });
 }
 
-function isAuthenticated(req) {
+export function isAuthenticated(req: any) {
   let token = '';
   if (
     req.headers.authorization &&
@@ -24,8 +24,3 @@ function isAuthenticated(req) {
 
   return true;
 }
-
-module.exports = {
-  generateJwtToken,
-  isAuthenticated,
-};

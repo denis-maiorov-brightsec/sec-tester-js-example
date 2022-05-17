@@ -1,8 +1,85 @@
 {
   "protected_resources": {
-    "users": ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    "products": ["POST", "PUT", "PATCH", "DELETE"]
+    "users": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "products": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ]
   },
+  "testResource": [
+    {
+      "id": 1,
+      "name": "test1"
+    },
+    {
+      "id": 2,
+      "name": "test2"
+    },
+    {
+      "subject": "Test",
+      "body": "<script>alert('xss')</script>",
+      "createdAt": 1652792330436,
+      "modifiedAt": 1652792330436,
+      "id": 3
+    },
+    {
+      "subject": "Test",
+      "body": "<script>alert('xss')</script>",
+      "createdAt": 1652792330668,
+      "modifiedAt": 1652792330668,
+      "id": 4
+    },
+    {
+      "subject": "Test0d4f494f6ff34a0eb31d0cecb1a5e47e",
+      "body": "<script>alert('xss')</script>",
+      "createdAt": 1652792330883,
+      "modifiedAt": 1652792330883,
+      "id": 5
+    },
+    {
+      "subject": "Test",
+      "body": "<script>alert('xss')0d4f494f6ff34a0eb31d0cecb1a5e47e</script>",
+      "createdAt": 1652792331093,
+      "modifiedAt": 1652792331093,
+      "id": 6
+    },
+    {
+      "subject": "Test",
+      "body": "<script>alert('xss')</script>",
+      "createdAt": 1652794262478,
+      "modifiedAt": 1652794262478,
+      "id": 7
+    },
+    {
+      "subject": "Test",
+      "body": "<script>alert('xss')</script>",
+      "createdAt": 1652794262714,
+      "modifiedAt": 1652794262714,
+      "id": 8
+    },
+    {
+      "subject": "Testb07f5a8222fd437ab1d8a194e92057fd",
+      "body": "<script>alert('xss')</script>",
+      "createdAt": 1652794262932,
+      "modifiedAt": 1652794262932,
+      "id": 9
+    },
+    {
+      "subject": "Test",
+      "body": "<script>alert('xss')b07f5a8222fd437ab1d8a194e92057fd</script>",
+      "createdAt": 1652794263146,
+      "modifiedAt": 1652794263146,
+      "id": 10
+    }
+  ],
   "users": [
     {
       "id": 1,

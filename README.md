@@ -113,7 +113,7 @@ You can use [https://mockaroo.com/](https://mockaroo.com/) to mock data, and pub
 
 Please view detailed document in [https://github.com/typicode/json-server/blob/master/README.md#table-of-contents](https://github.com/typicode/json-server/blob/master/README.md#table-of-contents)
 
-If you want to change logic of authentication or add more feature, please edit file `server.js` or `additional_routes.js`.
+If you want to change logic of authentication or add more feature, please edit file `server.ts` or `additional_routes.ts`.
 
 ## Default Endpoints
 
